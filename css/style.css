@@ -355,6 +355,7 @@ Footer .icon ul li{
     background-color: var(--font_Color);
     display: flex;
     justify-content: center;
+    align-items: center;
     transition: background-color 500ms;
 }
 
@@ -370,7 +371,7 @@ Footer .icon ul li a{
     text-decoration: none;
     color: #fff;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: color 300ms;
     margin: 0;
 }
