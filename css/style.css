@@ -84,16 +84,17 @@ body{
 }
 
 .link ul li:hover{
-    border-bottom: 2px solid var(--anchur_Hover_Color);
+    border-bottom: 2px solid #545B6B;
 }
 
 .link ul li:hover a{
-    color: var(--anchur_Hover_Color);
+    color: #c8ccd3;
 }
 
 .link ul li a{
     text-decoration: none;
-    color: var(--anchur_Color);
+    color: #697079;
+    font-weight: 700;
     display: block;
     transition: color 300ms;
 }
@@ -103,11 +104,12 @@ body{
 }
 
 .link ul .activ{
-    border-bottom: 2px solid var(--anchur_Hover_Color);
+    border-bottom: 2px solid #545B6B;
 }
 
 .link ul .activ a{
-    color: var(--anchur_Hover_Color);
+    color: #c8ccd3;
+
 }
 
 @media screen and (max-width:383px) {
@@ -135,18 +137,24 @@ body{
 /* berger */
 
 .berger{
-    background-color: var(--btn_Icon_Quote_titleBlog_BgColor);
+    background-color: transparent;
     width: 40px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 50%;
     padding: 5px 10px;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    border: 1px solid #fff;
-    transition: border 300ms;
+    border: solid;
+    border-width: 3px ;
+    border-color: #e32268 #3662ab #ffcb03 #f9962e;
+    transition: transform 600ms;
+}
+
+.berger:hover{
+    transform: rotate(180deg);
 }
 
 .berger span{
