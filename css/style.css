@@ -8,6 +8,9 @@
     --boldFont_Color: #2B3C47;
     --btn_Icon_Quote_titleBlog_BgColor: #fb6e52;
     --header_BgColor: #292c34;
+    --header_BgColoar: #34363b;
+
+
     --body-BgColor: #ffffff;
     --blog-BgColor: #f9f9f9;
 }
@@ -24,6 +27,24 @@ body{
     background-color: var(--body-BgColor);
 }
 
+/* up btn */
+.Up{
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 2px solid #777;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2000;
+}
+
 /* Navbar Section CSS */
 
 #Navbar{
@@ -32,6 +53,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 2000;
+    transition: background-color 500ms;
 }
 
 #logo img{
@@ -91,7 +113,6 @@ body{
 @media screen and (max-width:383px) {
     #logo{
         text-align: center;
-        margin-bottom: .5rem;
     }
     #Navbar .link ul{
         margin: auto;
@@ -102,26 +123,12 @@ body{
 }
 
 @media screen and (max-width:360px){
-    .link ul li{
-        padding: .3rem .5rem;
+    .link ul{
+        flex-direction: column;
     }
-}
-
-@media screen and (max-width:318px){
     .link ul li{
-        padding: .3rem .3rem;
-    }
-}
-
-@media screen and (max-width:290px){
-    .link ul li{
-        margin-right: .5rem;
-    }
-}
-
-@media screen and (max-width:279px){
-    .link ul li{
-        margin-right: .2rem;
+        margin-bottom: .5rem;
+        margin-right: 0rem;
     }
 }
 
@@ -129,8 +136,8 @@ body{
 
 .berger{
     background-color: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
     padding: 5px 10px;
     display: none;
@@ -158,12 +165,14 @@ body{
     margin-bottom: 0px;
 }
 
-
-
-
-
-
-
+@media screen and (max-width:767px){
+    #link{
+        display: none;
+    }
+    .berger{
+        display: flex;
+    }
+}
 
 /* Header Section CSS */
 
@@ -352,7 +361,7 @@ Footer .icon ul li{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--font_Color);
+    background-color: #2c3038;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,6 +375,13 @@ Footer .icon ul li:last-child{
 Footer .icon ul li:hover{
     background-color: var(--anchur_Color);
 }
+
+Footer .icon ul li:nth-child(3):hover,
+Footer .icon ul li:nth-child(4):hover{
+    background-color: rgb(252, 58, 58);
+}
+
+
 
 Footer .icon ul li a{
     text-decoration: none;
@@ -384,39 +400,26 @@ Footer .icon ul li a:hover{
     text-decoration: none;
 }
 
-@media screen and (max-width:383px) {
-    #logo{
+@media screen and (max-width:767px) {
+    Footer .row {
+        flex-direction: column;
+    }
+    Footer #logo{
         text-align: center;
         margin-bottom: 2rem;
     }
     Footer .icon ul{
         margin: auto;
     }
-    Footer .icon ul li{
-        padding: .5rem .8rem;
-    }
 }
 
-@media screen and (max-width:360px){
-    Footer .icon ul li{
-        padding: .3rem .5rem;
-    }
-}
-
-@media screen and (max-width:318px){
-    Footer .icon ul li{
-        padding: .3rem .3rem;
-    }
-}
-
-@media screen and (max-width:290px){
-    Footer .icon ul li{
-        margin-right: .5rem;
-    }
-}
-
-@media screen and (max-width:279px){
+@media screen and (max-width:245px) {
     Footer .icon ul li{
         margin-right: .2rem;
+    }
+    .berger{
+        height: 30px;
+        width: 30px;
+        padding: 5px;
     }
 }
